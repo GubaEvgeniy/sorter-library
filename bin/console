@@ -4,3 +4,15 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 
+use App\Sorter\{AscStrategy, DescStrategy, SorterStrategy};
+
+$numbers = [4, 6, 10, 16, 1074, 643];
+$words = ['this', 'is', 'sorting', 'test'];
+
+$sorterAscNum = new SorterStrategy($numbers, new AscStrategy());
+echo "Sorting Num by Asc: \n";
+\var_dump($sorterAscNum->sort());
+echo "\nSet Desc this array:\n";
+$sorterAscNum->setSortStrategy(new DescStrategy());
+\var_dump($sorterAscNum->sort());
+echo "\n";

@@ -8,9 +8,7 @@
  * file that was distributed with this source code.
  */
 
-use App\Sorter\AscStrategy;
-use App\Sorter\DescStrategy;
-use App\Sorter\SorterStrategy;
+use App\Sorter\{AscStrategy, DescStrategy, SorterStrategy};
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

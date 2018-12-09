@@ -11,10 +11,18 @@ Usage
 ```php
 ...
 
-$factory = new \Greeflas\Sorter\SorterStrategyFactory();
+$sorterAscNum = new SorterStrategy($numbers, new AscStrategy());
 
-$sorter = new ArraySorter($data, $factory->createAscStrategy());
-$sorter->sort();
+$sorterAscNum->sort()
+```
+And change sorting order:
+
+```php
+...
+
+$sorterAscNum->setSortStrategy(new DescStrategy());
+
+$sorterAscNum->sort()
 ```
 
 Tests
@@ -24,4 +32,10 @@ You can run tests with following command
 
 ```bash
 $ ./tests/run
+```
+
+or run in browser
+
+```php
+your.site/bin/sort.php
 ```
