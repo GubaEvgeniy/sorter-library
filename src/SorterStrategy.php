@@ -1,9 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: whoisthere
- * Date: 09.12.18
- * Time: 16:55
+
+/*
+ *
+ * (c) Evgeniy Guba <evgeniyguba@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace App\Sorter;
@@ -12,9 +14,7 @@ namespace App\Sorter;
  * Class SorterStrategy
  * Basic logic to sorting. Definition of incoming sort
  *
- * @package App\Sorter
  */
-
 class SorterStrategy
 {
     /**
@@ -32,7 +32,6 @@ class SorterStrategy
      * @param array $data
      * @param SorterStrategyInterface $sorterStrategy
      */
-
     public function __construct(array $data, SorterStrategyInterface $sorterStrategy)
     {
         $this->sortStrategy = $sorterStrategy;
@@ -44,7 +43,6 @@ class SorterStrategy
      *
      * @param SorterStrategyInterface $sorterStrategy
      */
-
     public function setSortStrategy(SorterStrategyInterface $sorterStrategy): void
     {
         $this->sortStrategy = $sorterStrategy;
@@ -54,7 +52,6 @@ class SorterStrategy
      *
      * @return array Return sorted array.
      */
-
     public function sort(): array
     {
         return $this->sortStrategy->sort($this->data);
